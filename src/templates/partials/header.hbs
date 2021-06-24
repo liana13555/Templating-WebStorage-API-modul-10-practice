@@ -1,3 +1,8 @@
 <nav class="navBar">
-    
+    <ul>
+{{#each navItems}}
+<li><a href="#page{{@index}}">{{this}}</a></li>
+{{/each}}
+    </ul>
 </nav>
+
