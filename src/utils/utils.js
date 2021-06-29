@@ -1,8 +1,11 @@
+
+import { USER_NAME } from './constants';
+
 export const setLocalStorage = (name) => {
   localStorage.setItem("userName", name);
 
   try {
-    localStorage.setItem("userName", name);
+    localStorage.setItem(USER_NAME, name);
   } catch (error) {
     console.log(error);
   }
@@ -10,8 +13,11 @@ export const setLocalStorage = (name) => {
 
 export const getLocalStorage = () => {
   try {
-    const isNameExists = localStorage.getItem("userName");
+    const isNameExists = localStorage.getItem(USER_NAME);
+
     if (!isNameExists) return false;
+
+    return isNameExists;
     } catch (error) {
     console.log(error);
   }
